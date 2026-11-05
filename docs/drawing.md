@@ -18,7 +18,7 @@
 
 - **In place, each frame:** `mii_view()` gives the projection and camera that frame the Mii in a viewport of your aspect, then `mii_draw()` draws it. Give the Mii a wide depth range: on a real Wii, its face's layers break up in a thin one (Dolphin hides this).
 - **Into your own 3D scene:** `mii_draw()` with your projection and camera, and a `place` matrix for where the Mii stands.
-- **Into a texture:** `mii_capture()` draws the whole Mii (or the head, with `pose.head_only`) with alpha, at twice the size and filtered down, for stills. `mii_icon()` draws a head icon framed as the Wii Menu frames it.
+- **Into a texture:** `mii_capture()` draws the whole Mii (or the head, with `pose.head_only`) with alpha, at twice the size and filtered down, for stills. `mii_capture_bust()` draws the head and shoulders, as a portrait, and `mii_icon()` draws a head icon framed as the Wii Menu frames it.
 
 ## Posing it
 
