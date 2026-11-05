@@ -87,7 +87,7 @@ Animations, effects, crowds of Miis and the rest are in [docs/drawing.md](docs/d
 
 ## License
 
-MiiKit is in the public domain, under [CC0 1.0](LICENSE). The face models and bodies it reads belong to Nintendo, and none of them are in this repository.
+MiiKit is in the public domain, under [CC0 1.0](LICENSE).
 
 MiiKit isn't affiliated with Nintendo.
 
