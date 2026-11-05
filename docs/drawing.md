@@ -12,7 +12,7 @@
 
 - `mii_model_make(&res, &m, 128, &model)` builds everything once: the head placed as RFL places it, the face in all seven expressions (`MII_EXPR_*`), and a body in the Mii's colors, scaled by its height and build. That's about 280 KB with 128 px faces, mostly the seven faces.
 - `mii_model_build` takes `mii_model_opts`: the face size (32 to 256 px) and which expressions to build. With 128 px faces and only the normal one, a Mii takes about 67 KB.
-- `mii_model_set_body(&model, &body)` puts the Wii's own body under it: Nintendo's skeleton and the Mii Channel's shirt and trousers, skinned on the GPU, with its animations and its shading. Without one, the model keeps a plainer body of MiiKit's own.
+- `mii_model_set_body(&model, &body)` puts the Wii's own body under it: Nintendo's skeleton and the Mii Channel's shirt and trousers, skinned on the GPU, with its animations and its shading. The head is then lit as the Mii Channel lights it, with the body's light texture. Without one, the model keeps a plainer body of MiiKit's own.
 
 ## Ways to draw it
 
