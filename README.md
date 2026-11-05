@@ -2,6 +2,10 @@
 
 MiiKit is a C library for Wii homebrew that reads, changes and draws Miis, as the Wii's own Mii library (RFL) does for games. It draws a Mii with GX from the Wii's own face models and bodies, which it can read straight from the NAND, so an app doesn't need anything on the SD card first. [MiiKit Demo](https://github.com/cmyksoda/MiiKit-Demo) uses it to show every Mii on a Wii in 3D.
 
+![Twelve Miis standing in two rows, drawn by MiiKit in MiiKit Demo](images/line-up.png)
+
+![A smiling Mii's close-up in MiiKit Demo, with its birthday, favorite color, height and weight beside it](images/close-up.png)
+
 MiiKit started as sdk/mii in [hbc-reborn](https://github.com/Monsterray/hbc-reborn), a maintained fork of the Homebrew Channel, and this repository keeps its history. The NAND loader (`miinand.c`) was added here.
 
 ## Files
