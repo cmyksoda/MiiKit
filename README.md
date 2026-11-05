@@ -73,7 +73,6 @@ mii_draw(&model, &pose, view, NULL);
 ```
 
 - **Reading from the NAND needs AHBPROT:** `<ahb_access/>` in your `meta.xml`, and no IOS reload before the call. IOS refuses these files to apps, so `miinand.c` lifts its check for the read and then puts back exactly what it changed. Without AHBPROT the calls return `MII_E_DENIED`, and `mii_res_load(&res, NULL)` reads a copy at `sd:/mii/RFL_Res.dat` instead, which hbc-reborn's Save Mii faces makes.
-- **The face models and bodies are Nintendo's.** Read them from the user's Wii, and never ship them with your app.
 - **Stills:** `mii_capture()` draws a Mii into a texture, and `mii_icon()` draws a head icon framed as the Wii Menu frames it. Both use a corner of the EFB, so call them between frames, then set your GX state again. Call `GX_DrawDone()` before the CPU reads the texture.
 - **Keep your GX FIFO in MEM1,** as a static array. A GPU fed its commands from MEM2 stalled at random on a real Wii.
 - **In Dolphin,** the CPU sees a captured texture as zeros unless Graphics > Hacks > "Store EFB Copies to Texture Only" is off.
